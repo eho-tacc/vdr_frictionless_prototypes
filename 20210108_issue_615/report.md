@@ -2,14 +2,14 @@
 
 # Overview
 
-Validation tasks with `no_pool=False` raise the following error (wrapped in a response with code `task-error`):
+Validation tasks with `nopool=False` raise the following error (wrapped in a response with code `task-error`):
 ```
 TypeError("cannot pickle '_hashlib.HASH' object")
 ```
 This only occurs if `resource.schema` is a reference to a JSON file (#609, and #611). I suspect that this is an error during serialization when a validation task is in a `multiprocessing.pool`.
 
 Validation passes if:
-1. Pass `no_pool=True` to `validate_package`
+1. Pass `nopool=True` to `validate_package`
 2. Other changes that I assume result in serial execution, such as:
     * Change the contents of `schema.json` to `{"fields": []}` or `{}`
     * Yank the JSON object from `schema.json` to the `schema` field, as an inline JSON object

@@ -30,7 +30,7 @@
             "dialect": {
                 "commentChar": "#"
             },
-            "schema": "schemas/schema.json",
+            "schema": "schemas/index.json",
             "name": "index",
             "profile": "tabular-data-resource",
             "scheme": "file",
@@ -55,7 +55,7 @@
             "dialect": {
                 "commentChar": "#"
             },
-            "schema": "ladder.json",
+            "schema": "schemas/ladder.json",
             "name": "ladder",
             "profile": "tabular-data-resource",
             "scheme": "file",
@@ -77,7 +77,7 @@
             "dialect": {
                 "commentChar": "#"
             },
-            "schema": "schemas/schema.json",
+            "schema": "schemas/ladder_index.json",
             "name": "ladder_index",
             "profile": "tabular-data-resource",
             "scheme": "file",
@@ -99,7 +99,7 @@
             "dialect": {
                 "commentChar": "#"
             },
-            "schema": "schemas/schema.json",
+            "schema": "schemas/stab_scores.json",
             "name": "stab_scores",
             "profile": "tabular-data-resource",
             "scheme": "file",
