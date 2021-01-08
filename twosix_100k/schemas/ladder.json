@@ -1,4 +1,14 @@
 {
+    "primaryKey": ["dataset", "name"],
+    "foreignKeys": [
+        {
+            "fields": ["dataset", "name"],
+            "reference": {
+                "resource": "ladder_index",
+                "fields": ["dataset", "name"]
+            }
+        }
+    ],
     "fields": [
         {
             "name": "dataset",

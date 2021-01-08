@@ -1,1 +1,13 @@
-{}
+{
+    "primaryKey": ["dataset", "name"],
+    "fields": [
+        {
+            "name": "dataset",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "type": "string"
+        }
+    ]
+}
