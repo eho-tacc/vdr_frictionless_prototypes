@@ -1,4 +1,5 @@
 {
+    "primaryKey": ["dataset", "name"],
     "fields": [
         {
             "name": "dataset",
