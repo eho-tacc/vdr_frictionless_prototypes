@@ -2,11 +2,11 @@ import frictionless as fl
 
 
 def main():
-    report = fl.validate_package('datapackage.json', nopool=False)
-    if report.errors:
-        print(report)
-    else:
+    report = fl.validate_package('datapackage.json', nopool=True)
+    if report.valid:
         print("Is valid")
+    else:
+        print(report)
 
 
 if __name__ == '__main__':
