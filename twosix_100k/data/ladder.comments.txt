@@ -1,0 +1,3 @@
+# Ladder proteins and Rocklin proteins on TwoSix chip
+# Author: Jed Singer
+# Index: TwoSix_100K_ladder.v1.index.csv

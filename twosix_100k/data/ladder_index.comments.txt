@@ -1,0 +1,2 @@
+# Original Index for ladder proteins useable with TwoSix 100K chip
+# Author: Jed Singer

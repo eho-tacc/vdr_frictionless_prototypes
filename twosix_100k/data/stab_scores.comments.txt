@@ -1,0 +1,9 @@
+# Experimental stability scores from TwoSix_100K calibrated to Rocklin
+# Calibration linear transformations: f_t(x) = -0.217600 + 1.159594*(x)  and  f_c(x) = -1.335990 + 1.452309*(x)
+# Ladder Files: TwoSix_100K.v1.ladder_ec50_values.csv
+# Original File: TwoSix_100K.v2.experimental_stability_scores.csv
+# Generated on: 2019-10-09 20:33:25
+# Author: Francis Motta, Jed Singer
+# Index: TwoSix_100K.v0.index.csv
+# Includes stability scores and predicted unfolded-state EC50 values from CNN model.
+# Values with *_cnn_* [i.e. *_pred_* and stabilityscore_*] are based on this (probably-improved) model.

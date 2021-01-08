@@ -1,0 +1,113 @@
+{
+    "name": "sd2e/twosix_100k",
+    "created": "2021-01-04T19:17:36.799628Z",
+    "keywords": [
+        "protein stability"
+    ],
+    "version": "1",
+    "contributors": [
+        "Ethan Ho"
+    ],
+    "image": "",
+    "profile": "data-package",
+    "_datasets": {
+        "updated": "2021-01-08T16:00:21.146564Z",
+        "signature": "5730bb4e95b3113f56f2f8270b0f55e8"
+    },
+    "resources": [
+        {
+            "path": "data/index.csv",
+            "stats": {
+                "hash": "53b5736013faa5d4882cf67e4b0282ed",
+                "bytes": 4750324,
+                "fields": 2,
+                "rows": 98982
+            },
+            "control": {
+                "newline": ""
+            },
+            "encoding": "utf-8",
+            "dialect": {
+                "commentChar": "#"
+            },
+            "schema": "schemas/schema.json",
+            "name": "index",
+            "profile": "tabular-data-resource",
+            "scheme": "file",
+            "format": "csv",
+            "hashing": "md5",
+            "compression": "no",
+            "compressionPath": "",
+            "query": {}
+        },
+        {
+            "path": "data/ladder.csv",
+            "stats": {
+                "hash": "4102afd2fd8eb8e7f0dc04c3c16bc4fd",
+                "bytes": 110134,
+                "fields": 7,
+                "rows": 1089
+            },
+            "control": {
+                "newline": ""
+            },
+            "encoding": "utf-8",
+            "dialect": {
+                "commentChar": "#"
+            },
+            "schema": "ladder.json",
+            "name": "ladder",
+            "profile": "tabular-data-resource",
+            "scheme": "file",
+            "format": "csv",
+            "hashing": "md5",
+            "compression": "no",
+            "compressionPath": "",
+            "query": {}
+        },
+        {
+            "path": "data/ladder_index.csv",
+            "stats": {
+                "hash": "713d3da1894ad9864a8fea9e06f24ad8",
+                "bytes": 24623,
+                "fields": 2,
+                "rows": 1089
+            },
+            "encoding": "utf-8",
+            "dialect": {
+                "commentChar": "#"
+            },
+            "schema": "schemas/schema.json",
+            "name": "ladder_index",
+            "profile": "tabular-data-resource",
+            "scheme": "file",
+            "format": "csv",
+            "hashing": "md5",
+            "compression": "no",
+            "compressionPath": "",
+            "query": {}
+        },
+        {
+            "path": "data/stab_scores.csv",
+            "stats": {
+                "hash": "dbbd5c34ab3909a60ce3434c082828c2",
+                "bytes": 181442550,
+                "fields": 117,
+                "rows": 98982
+            },
+            "encoding": "utf-8",
+            "dialect": {
+                "commentChar": "#"
+            },
+            "schema": "schemas/schema.json",
+            "name": "stab_scores",
+            "profile": "tabular-data-resource",
+            "scheme": "file",
+            "format": "csv",
+            "hashing": "md5",
+            "compression": "no",
+            "compressionPath": "",
+            "query": {}
+        }
+    ]
+}
