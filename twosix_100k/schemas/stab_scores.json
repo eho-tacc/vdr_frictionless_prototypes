@@ -1,5 +1,14 @@
 {
     "primaryKey": ["dataset", "name"],
+    "foreignKeys": [
+        {
+            "fields": ["dataset", "name"],
+            "reference": {
+                "resource": "index",
+                "fields": ["dataset", "name"]
+            }
+        }
+    ],
     "fields": [
         {
             "name": "dataset",
