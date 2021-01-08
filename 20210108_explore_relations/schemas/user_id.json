@@ -1,0 +1,20 @@
+{
+    "primaryKey": ["first_name", "last_name"],
+    "fields": [
+        {
+            "name": "first_name",
+            "type": "string",
+            "constraints": {
+                "pattern": "^foobar$"
+            }
+        },
+        {
+            "name": "last_name",
+            "type": "string"
+        },
+        {
+            "name": "user_id",
+            "type": "string"
+        }
+    ]
+}

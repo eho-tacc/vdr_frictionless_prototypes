@@ -1,0 +1,17 @@
+{
+    "primaryKey": ["first_name", "last_name"],
+    "fields": [
+        {
+            "name": "first_name",
+            "type": "string"
+        },
+        {
+            "name": "last_name",
+            "type": "string"
+        },
+        {
+            "name": "balance",
+            "type": "integer"
+        }
+    ]
+}
