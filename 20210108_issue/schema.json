@@ -1,8 +1,12 @@
 {
+    "primaryKey": "user",
     "fields": [
         {
             "name": "user",
-            "type": "string"
+            "type": "string",
+            "constraints": {
+                "unique": true
+            }
         },
         {
             "name": "balance",

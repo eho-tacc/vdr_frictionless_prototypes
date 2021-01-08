@@ -1,17 +1,6 @@
 {
     "name": "data",
     "path": "data.csv",
-    "schema": {
-        "fields": [
-            {
-                "name": "user",
-                "type": "string"
-            },
-            {
-                "name": "balance",
-                "type": "integer"
-            }
-        ]
-    },
+    "schema": "schema.json",
     "profile": "tabular-data-resource"
 }
