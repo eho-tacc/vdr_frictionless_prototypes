@@ -3,11 +3,11 @@ import frictionless as fl
 
 
 def main():
-    report = fl.validate_package('datapackage.json')
+    report = fl.validate_package('datapackage.json', nopool=False)
     # breakpoint()
     if report.errors:
         pp(report)
-        breakpoint()
+        # breakpoint()
     else:
         print("Is valid")
 

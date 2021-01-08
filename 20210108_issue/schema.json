@@ -1,12 +1,1 @@
-{
-    "fields": [
-        {
-            "name": "user",
-            "type": "string"
-        },
-        {
-            "name": "balance",
-            "type": "integer"
-        }
-    ]
-}
+{}
