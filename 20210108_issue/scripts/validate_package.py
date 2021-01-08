@@ -1,13 +1,10 @@
-from pprint import pprint as pp
 import frictionless as fl
 
 
 def main():
     report = fl.validate_package('datapackage.json', nopool=False)
-    # breakpoint()
     if report.errors:
-        pp(report)
-        # breakpoint()
+        print(report)
     else:
         print("Is valid")
 
