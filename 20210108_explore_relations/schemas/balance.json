@@ -1,0 +1,24 @@
+{
+    "primaryKey": "user_id",
+    "foreignKeys": [
+        {
+            "fields": "user_id",
+            "reference": {
+                "resource": "user_id",
+                "fields": "user_id"
+            }
+        }
+    ],
+    "fields": [
+        {
+            "name": "user_id",
+            "type": "string",
+            "constraints": {
+                "minLength": 100
+            }
+        },
+        {
+            "name": "balance"
+        }
+    ]
+}

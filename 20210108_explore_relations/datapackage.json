@@ -3,15 +3,9 @@
     "profile": "tabular-data-package",
     "resources": [
         {
-            "name": "customers",
-            "schema": "schemas/customers.json",
-            "path": "data/customers.csv",
-            "stats": {
-                "hash": "0246f22e5019c9c47e0ad40404e2f122",
-                "bytes": 84,
-                "fields": 3,
-                "rows": 4
-            },
+            "name": "balance",
+            "schema": "schemas/balance.json",
+            "path": "data/balance.csv",
             "control": {
                 "newline": ""
             },
@@ -31,12 +25,6 @@
             "name": "user_id",
             "schema": "schemas/user_id.json",
             "path": "data/user_id.csv",
-            "stats": {
-                "hash": "a2785e39fb51c9301404c82b249965d2",
-                "bytes": 90,
-                "fields": 3,
-                "rows": 4
-            },
             "control": {
                 "newline": ""
             },
