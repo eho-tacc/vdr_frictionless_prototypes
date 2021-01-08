@@ -2,12 +2,14 @@
     "primaryKey": ["dataset", "name"],
     "fields": [
         {
-            "name": "dataset",
-            "type": "string"
+            "name": "dataset"
         },
         {
             "name": "name",
-            "type": "string"
+            "type": "string",
+            "constraints": {
+                "unique": true
+            }
         }
     ]
 }

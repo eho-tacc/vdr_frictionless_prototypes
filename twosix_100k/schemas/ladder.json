@@ -16,7 +16,10 @@
         },
         {
             "name": "name",
-            "type": "string"
+            "type": "string",
+            "constraints": {
+                "unique": true
+            }
         },
         {
             "name": "chip_name",
