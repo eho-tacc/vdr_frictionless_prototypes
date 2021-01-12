@@ -1,0 +1,3 @@
+# ec50 values for ladder proteins and Rocklin proteins
+# Author: Jed Singer
+# Index: ladder_1_with_all_Rocklin.v1.index.csv
