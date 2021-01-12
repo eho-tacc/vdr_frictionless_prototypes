@@ -1,5 +1,5 @@
 {
-    "primaryKey": ["dataset", "name"],
+    "primaryKey": ["chip_dataset", "chip_name"],
     "foreignKeys": [
         {
             "fields": ["chip_dataset", "chip_name"],

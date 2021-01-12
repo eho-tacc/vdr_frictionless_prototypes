@@ -88,7 +88,10 @@
             "query": {}
         },
         {
-            "path": "data/stab_scores.csv",
+            "path": ["data/stab_scores_1.csv", "data/stab_scores_2.csv"],
+            "schema": "schemas/stab_scores.json",
+            "name": "stab_scores",
+            "profile": "tabular-data-resource",
             "stats": {
                 "hash": "dbbd5c34ab3909a60ce3434c082828c2",
                 "bytes": 181442550,
@@ -99,10 +102,6 @@
             "dialect": {
                 "commentChar": "#"
             },
-            "schema": "schemas/stab_scores.json",
-            "name": "stab_scores",
-            "profile": "tabular-data-resource",
-            "scheme": "file",
             "format": "csv",
             "hashing": "md5",
             "compression": "no",
