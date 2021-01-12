@@ -43,9 +43,9 @@
         {
             "path": "data/ladder.csv",
             "stats": {
-                "hash": "4102afd2fd8eb8e7f0dc04c3c16bc4fd",
-                "bytes": 110134,
-                "fields": 7,
+                "hash": "7c758aebd4ab0286105712752d6a56b6",
+                "bytes": 123215,
+                "fields": 8,
                 "rows": 1089
             },
             "control": {

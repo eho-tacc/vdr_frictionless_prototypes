@@ -2,9 +2,9 @@
     "primaryKey": ["dataset", "name"],
     "foreignKeys": [
         {
-            "fields": ["dataset", "name"],
+            "fields": ["chip_dataset", "chip_name"],
             "reference": {
-                "resource": "ladder_index",
+                "resource": "index",
                 "fields": ["dataset", "name"]
             }
         }
@@ -12,26 +12,31 @@
     "fields": [
         {
             "name": "dataset",
-            "type": "string"
+            "type": "string",
+            "description": "name of the dataset/chip that this ladder design was originally run on"
         },
         {
             "name": "name",
             "type": "string",
+            "description": "name of this ladder design when it was originally run on dataset/chip",
             "constraints": {
                 "unique": true
             }
         },
         {
             "name": "chip_name",
-            "type": "string"
+            "type": "string",
+            "description": "name of the dataset/chip that this ladder design was recently run on"
         },
         {
             "name": "ec50_t",
-            "type": "number"
+            "type": "number",
+            "description": "trypsin EC50 when this ladder was run on the recent chip"
         },
         {
             "name": "ec50_c",
-            "type": "number"
+            "type": "number",
+            "description": "chymotrypsin EC50 when this ladder was run on the recent chip"
         },
         {
             "name": "ec50_95ci_t",
@@ -40,6 +45,11 @@
         {
             "name": "ec50_95ci_c",
             "type": "number"
+        },
+        {
+            "name": "chip_dataset",
+            "type": "string",
+            "description": "name of this ladder design when it was recently run on dataset/chip"
         }
     ]
 }
