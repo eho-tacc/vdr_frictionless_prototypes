@@ -1,0 +1,36 @@
+{
+    "primaryKey": ["dataset", "name"],
+    "fields": [
+        {
+            "name": "dataset",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "constraints": {
+                "unique": true
+            }
+        },
+        {
+            "name": "ec50_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_c",
+            "type": "number"
+        },
+        {
+            "name": "chip_name",
+            "type": "string"
+        }
+    ]
+}

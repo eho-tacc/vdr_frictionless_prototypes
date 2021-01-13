@@ -41,6 +41,31 @@
             "query": {}
         },
         {
+            "path": "data/base_ladder.csv",
+            "stats": {
+                "hash": "58a81f85f03c85ce10b8769c27af2af4",
+                "bytes": 907397,
+                "fields": 7,
+                "rows": 16534
+            },
+            "control": {
+                "newline": ""
+            },
+            "encoding": "utf-8",
+            "dialect": {
+                "commentChar": "#"
+            },
+            "schema": "schemas/base_ladder.json",
+            "name": "base_ladder",
+            "profile": "tabular-data-resource",
+            "scheme": "file",
+            "format": "csv",
+            "hashing": "md5",
+            "compression": "no",
+            "compressionPath": "",
+            "query": {}
+        },
+        {
             "path": "data/ladder.csv",
             "stats": {
                 "hash": "7c758aebd4ab0286105712752d6a56b6",
