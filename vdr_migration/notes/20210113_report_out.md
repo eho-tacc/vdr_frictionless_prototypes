@@ -51,7 +51,7 @@ We'll see that this poses problems for migrating SD2E Versioned Datasets, in par
 
 Relationships between fields in different tables are drawn using two fields in a [Table Schema](https://specs.frictionlessdata.io/table-schema/): [`primaryKey`](https://specs.frictionlessdata.io/table-schema/#primary-key) and [`foreignKey`](https://specs.frictionlessdata.io/table-schema/#foreign-keys).
 
-[`primaryKey`](https://specs.frictionlessdata.io/table-schema/#primary-key) is an optional field in the schema that defines one or more fields in a table. These field(s) **uniquely** identify each row in a [Data Resource](https://specs.frictionlessdata.io/data-resource/). Non-unique `foreignKey`s will raise an error during validation.
+[`primaryKey`](https://specs.frictionlessdata.io/table-schema/#primary-key) is an optional field in the schema that defines one or more fields in a table. These field(s) **uniquely** identify each row in a [Data Resource](https://specs.frictionlessdata.io/data-resource/). The presence of rows with non-unique `primaryKey`s will raise an error during validation.
 
 [`foreignKey`](https://specs.frictionlessdata.io/table-schema/#foreign-keys) is an optional field in the schema that defines relationships to another [Table Schema](https://specs.frictionlessdata.io/table-schema/) that describes a [Data Resources](https://specs.frictionlessdata.io/data-resource/) (or tables). For every row of the table described by this schema (the schema that has a `foreignKey` defined), Frictionless "looks up" the `primaryKey` of that row in the other table (defined at each `foreignKey/reference/resource`).
 
@@ -76,17 +76,17 @@ Notably, `foreignKey` **links** two schemas, but neither schema **inherits** fro
     }
 }
 ```
-Enforces `schema/fields/constraints` only to the `dataset` field in Resource `some_data` , but not to `dataset` in `other_data` Resource.
+enforces `schema/fields/constraints` only to the `dataset` field in Resource `some_data` , but not to `dataset` in `other_data` Resource. Likewise, any `schema/fields/constraints` defined for field `dataset` in Resource `other_data` will not be enforced on the `some_data` Resource.
 
 ## Bugs & Pain Points Using Tapis Datasets CLI
 
 * `datasets builder init`
-    * Generates empty placeholders for `contributors`, `keywords`, and `licences` fields.
-        * `frictionless validate datapackage.json` complains that these fields are too short
+    * Generates empty placeholder values for `contributors`, `keywords`, and `licences` fields in `datapackage.json`.
+        * `frictionless validate --nopool datapackage.json` complains that these fields are too short
         * Validation passes if these placeholders are removed
-    * Most of the time, I just want files in the top level of `./data`
+    * Most of the time, I just want to infer files in the top level of `./data`
         * It would be nice if there were a `--max-depth` or `--recurse` option here
-        * Maybe add exclude options? e.g. `--exclude datapackage.json --exclude dataresource.json --exlude schemas/` by default
+        * Maybe add exclude options? e.g. `--exclude datapackage.json --exclude dataresource.json --exclude schemas/` by default
         * `datasets builder init data` generates `data/datapackage.json`
             * This wouldn't be an issue, except that the `resources/path` are pointing to the wrong place
     * Populates `resources/scheme`, which breaks `resources/path` if `path` is an array.
@@ -96,7 +96,7 @@ Enforces `schema/fields/constraints` only to the `dataset` field in Resource `so
 
 ### Frictionless
 
-As far as I am aware, the fields in a Frictionless [Table Schema](https://specs.frictionlessdata.io/table-schema/) must **exactly** match the fields in the tabular data it describes. Adding or removing a single field in the tabular data, even if `schema/fields/constraints/required` is `false` fails schema validation.
+As far as I am aware, the fields in a Frictionless [Table Schema](https://specs.frictionlessdata.io/table-schema/) must **exactly** match the fields in the tabular data it describes. Adding or removing a single field in the tabular data, even if `schema/fields/constraints/required` is `false` for that field, fails schema validation.
 
 ### SD2E Versioned Datasets (VDS)
 
@@ -104,7 +104,7 @@ The Versioned Datasets Repository has minimal enforcement of which fields are in
 
 ### VDS -> Frictionless Migration
 
-The consequence of the above two design choices is that very similar Data Resources, differing only by 1 or 2 columns, fails validation against any single schema (except an empty schema, of course). Without modifying tabular data, this prevents us from defining a single Data Resource with multiple `path`s, which would be ideal for migrating VDS.
+The consequence of the above two design choices is that very similar tabular data sources (CSV files in the case of VDS), differing only by 1 or 2 columns (fields), fails validation against any single schema (exception is an empty schema). Without modifying tabular data, this prevents us from defining a single Data Resource with multiple `path`s, which would be ideal for migrating VDS.
 
 An example of this is the addition of another VDS dataset `data/winter19_stab_scores_1.csv` as a `path` in the `stab_scores` Data Resource. The `stab_scores` schema (`schemas/stab_scores.csv`) contains 3 extra columns compared to the tabular data in `data/winter19_stab_scores_1.csv`, because the schema was inferred from `data/TwoSix_100K_stab_scores_1.csv`.
 
