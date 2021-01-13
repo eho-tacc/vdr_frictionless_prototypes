@@ -1,5 +1,5 @@
 {
-    "name": "sd2e/twosix_100k",
+    "name": "sd2e/protein_stability",
     "created": "2021-01-04T19:17:36.799628Z",
     "keywords": [
         "protein stability"
@@ -115,7 +115,7 @@
         },
         {
             "path": [
-                "data/stab_scores_1.csv", "data/stab_scores_2.csv"
+                "data/TwoSix_100K_stab_scores_1.csv", "data/TwoSix_100K_stab_scores_2.csv"
             ],
             "schema": "schemas/stab_scores.json",
             "name": "stab_scores",
