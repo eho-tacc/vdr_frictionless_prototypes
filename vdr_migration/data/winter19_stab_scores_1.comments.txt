@@ -1,0 +1,9 @@
+# Experimental stability scores from 100K_winter19 calibrated to Rocklin
+# Calibration linear transformations: f_t(x) = 0.769210 + 1.056983*(x)  and  f_c(x) = -0.271726 + 1.293531*(x)
+# Ladder Files: 100K_winter19.v1.ladder_ec50_values.csv
+# Original File: 100K_winter19.v1.experimental_stability_scores.csv
+# Generated on: 2020-08-06 20:08:38
+# Author: Ethan Ho (sd2eadm_rocklin-ladder-cal), Jed Singer
+# Index: 100K_winter19.v0.index.csv
+# Includes stability scores and predicted unfolded-state EC50 values from CNN model.
+# Values with *_cnn_* [i.e. *_pred_* and stabilityscore_*] are based on this (probably-improved) model.

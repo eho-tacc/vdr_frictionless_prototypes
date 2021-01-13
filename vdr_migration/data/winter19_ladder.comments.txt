@@ -1,0 +1,6 @@
+# Dataframe containing ladder designs
+# Author: sd2eadm_rocklin-ladder-cal
+# Date: 2020-08-06
+# Dataset: 100K_winter19
+# Index: 100K_winter19_ladder.v0.index.csv
+# Derived from: /mnt/ephemeral-01/./wd/100K_winter19.v1.experimental_stability_scores.csv
