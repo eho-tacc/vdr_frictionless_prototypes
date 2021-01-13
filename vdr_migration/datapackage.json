@@ -66,7 +66,9 @@
             "query": {}
         },
         {
-            "path": "data/ladder.csv",
+            "path": [
+                "data/ladder.csv"
+            ],
             "stats": {
                 "hash": "7c758aebd4ab0286105712752d6a56b6",
                 "bytes": 123215,
@@ -83,7 +85,6 @@
             "schema": "schemas/ladder.json",
             "name": "ladder",
             "profile": "tabular-data-resource",
-            "scheme": "file",
             "format": "csv",
             "hashing": "md5",
             "compression": "no",
@@ -113,7 +114,9 @@
             "query": {}
         },
         {
-            "path": ["data/stab_scores_1.csv", "data/stab_scores_2.csv"],
+            "path": [
+                "data/stab_scores_1.csv", "data/stab_scores_2.csv"
+            ],
             "schema": "schemas/stab_scores.json",
             "name": "stab_scores",
             "profile": "tabular-data-resource",
