@@ -7,6 +7,13 @@
                 "resource": "index",
                 "fields": ["dataset", "name"]
             }
+        },
+        {
+            "fields": ["dataset", "name"],
+            "reference": {
+                "resource": "base_ladder",
+                "fields": ["dataset", "name"]
+            }
         }
     ],
     "fields": [
