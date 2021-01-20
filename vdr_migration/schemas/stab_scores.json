@@ -1,14 +1,5 @@
 {
     "primaryKey": ["dataset", "name"],
-    "foreignKeys": [
-        {
-            "fields": ["dataset", "name"],
-            "reference": {
-                "resource": "index",
-                "fields": ["dataset", "name"]
-            }
-        }
-    ],
     "fields": [
         {
             "name": "dataset",
@@ -16,145 +7,14 @@
         },
         {
             "name": "name",
-            "type": "string",
-            "constraints": {
-                "unique": true
-            }
+            "type": "string"
         },
         {
-            "name": "counts0_t",
+            "name": "assay_library",
             "type": "number"
         },
         {
-            "name": "counts1_t",
-            "type": "number"
-        },
-        {
-            "name": "counts2_t",
-            "type": "number"
-        },
-        {
-            "name": "counts3_t",
-            "type": "number"
-        },
-        {
-            "name": "counts4_t",
-            "type": "number"
-        },
-        {
-            "name": "counts5_t",
-            "type": "number"
-        },
-        {
-            "name": "counts6_t",
-            "type": "number"
-        },
-        {
-            "name": "downsamp_counts1_t",
-            "type": "number"
-        },
-        {
-            "name": "downsamp_counts2_t",
-            "type": "number"
-        },
-        {
-            "name": "downsamp_counts3_t",
-            "type": "number"
-        },
-        {
-            "name": "downsamp_counts4_t",
-            "type": "number"
-        },
-        {
-            "name": "downsamp_counts5_t",
-            "type": "number"
-        },
-        {
-            "name": "downsamp_counts6_t",
-            "type": "number"
-        },
-        {
-            "name": "pred_counts1_t",
-            "type": "number"
-        },
-        {
-            "name": "pred_counts2_t",
-            "type": "number"
-        },
-        {
-            "name": "pred_counts3_t",
-            "type": "number"
-        },
-        {
-            "name": "pred_counts4_t",
-            "type": "number"
-        },
-        {
-            "name": "pred_counts5_t",
-            "type": "number"
-        },
-        {
-            "name": "pred_counts6_t",
-            "type": "number"
-        },
-        {
-            "name": "delta_llh1_t",
-            "type": "number"
-        },
-        {
-            "name": "delta_llh2_t",
-            "type": "number"
-        },
-        {
-            "name": "delta_llh3_t",
-            "type": "number"
-        },
-        {
-            "name": "delta_llh4_t",
-            "type": "number"
-        },
-        {
-            "name": "delta_llh5_t",
-            "type": "number"
-        },
-        {
-            "name": "delta_llh6_t",
-            "type": "number"
-        },
-        {
-            "name": "signed_delta_llh1_t",
-            "type": "number"
-        },
-        {
-            "name": "signed_delta_llh2_t",
-            "type": "number"
-        },
-        {
-            "name": "signed_delta_llh3_t",
-            "type": "number"
-        },
-        {
-            "name": "signed_delta_llh4_t",
-            "type": "number"
-        },
-        {
-            "name": "signed_delta_llh5_t",
-            "type": "number"
-        },
-        {
-            "name": "signed_delta_llh6_t",
-            "type": "number"
-        },
-        {
-            "name": "sel_k_t",
-            "type": "number"
-        },
-        {
-            "name": "sum_delta_llh_t",
-            "type": "number"
-        },
-        {
-            "name": "sum_signed_delta_llh_t",
+            "name": "ec50_t",
             "type": "number"
         },
         {
@@ -170,163 +30,19 @@
             "type": "number"
         },
         {
-            "name": "ec50_v2_t",
-            "type": "number"
-        },
-        {
-            "name": "protein_sequence_t",
-            "type": "string"
-        },
-        {
-            "name": "full_protein_sequence_t",
-            "type": "string"
-        },
-        {
             "name": "ec50_pred_t",
             "type": "number"
         },
         {
-            "name": "ec50_rise_v2_t",
+            "name": "ec50_rise_t",
             "type": "number"
         },
         {
-            "name": "stabilityscore_v2_t",
+            "name": "stabilityscore_t",
             "type": "number"
         },
         {
-            "name": "counts0_c",
-            "type": "number"
-        },
-        {
-            "name": "counts1_c",
-            "type": "number"
-        },
-        {
-            "name": "counts2_c",
-            "type": "number"
-        },
-        {
-            "name": "counts3_c",
-            "type": "number"
-        },
-        {
-            "name": "counts4_c",
-            "type": "number"
-        },
-        {
-            "name": "counts5_c",
-            "type": "number"
-        },
-        {
-            "name": "counts6_c",
-            "type": "number"
-        },
-        {
-            "name": "downsamp_counts1_c",
-            "type": "number"
-        },
-        {
-            "name": "downsamp_counts2_c",
-            "type": "number"
-        },
-        {
-            "name": "downsamp_counts3_c",
-            "type": "number"
-        },
-        {
-            "name": "downsamp_counts4_c",
-            "type": "number"
-        },
-        {
-            "name": "downsamp_counts5_c",
-            "type": "number"
-        },
-        {
-            "name": "downsamp_counts6_c",
-            "type": "number"
-        },
-        {
-            "name": "pred_counts1_c",
-            "type": "number"
-        },
-        {
-            "name": "pred_counts2_c",
-            "type": "number"
-        },
-        {
-            "name": "pred_counts3_c",
-            "type": "number"
-        },
-        {
-            "name": "pred_counts4_c",
-            "type": "number"
-        },
-        {
-            "name": "pred_counts5_c",
-            "type": "number"
-        },
-        {
-            "name": "pred_counts6_c",
-            "type": "number"
-        },
-        {
-            "name": "delta_llh1_c",
-            "type": "number"
-        },
-        {
-            "name": "delta_llh2_c",
-            "type": "number"
-        },
-        {
-            "name": "delta_llh3_c",
-            "type": "number"
-        },
-        {
-            "name": "delta_llh4_c",
-            "type": "number"
-        },
-        {
-            "name": "delta_llh5_c",
-            "type": "number"
-        },
-        {
-            "name": "delta_llh6_c",
-            "type": "number"
-        },
-        {
-            "name": "signed_delta_llh1_c",
-            "type": "number"
-        },
-        {
-            "name": "signed_delta_llh2_c",
-            "type": "number"
-        },
-        {
-            "name": "signed_delta_llh3_c",
-            "type": "number"
-        },
-        {
-            "name": "signed_delta_llh4_c",
-            "type": "number"
-        },
-        {
-            "name": "signed_delta_llh5_c",
-            "type": "number"
-        },
-        {
-            "name": "signed_delta_llh6_c",
-            "type": "number"
-        },
-        {
-            "name": "sel_k_c",
-            "type": "number"
-        },
-        {
-            "name": "sum_delta_llh_c",
-            "type": "number"
-        },
-        {
-            "name": "sum_signed_delta_llh_c",
+            "name": "ec50_c",
             "type": "number"
         },
         {
@@ -342,63 +58,7 @@
             "type": "number"
         },
         {
-            "name": "ec50_v2_c",
-            "type": "number"
-        },
-        {
-            "name": "protein_sequence_c",
-            "type": "string"
-        },
-        {
-            "name": "full_protein_sequence_c",
-            "type": "string"
-        },
-        {
             "name": "ec50_pred_c",
-            "type": "number"
-        },
-        {
-            "name": "ec50_rise_v2_c",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_v2_c",
-            "type": "number"
-        },
-        {
-            "name": "base_sequence",
-            "type": "string"
-        },
-        {
-            "name": "manipulation",
-            "type": "string"
-        },
-        {
-            "name": "n_steps",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_v2",
-            "type": "number"
-        },
-        {
-            "name": "sequence",
-            "type": "string"
-        },
-        {
-            "name": "ec50_c",
-            "type": "number"
-        },
-        {
-            "name": "ec50_t",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_c",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_t",
             "type": "number"
         },
         {
@@ -406,47 +66,11 @@
             "type": "number"
         },
         {
-            "name": "ec50_rise_t",
+            "name": "stabilityscore_c",
             "type": "number"
         },
         {
             "name": "stabilityscore",
-            "type": "number"
-        },
-        {
-            "name": "ec50_t_calibrated_1",
-            "type": "number"
-        },
-        {
-            "name": "ec50_c_calibrated_1",
-            "type": "number"
-        },
-        {
-            "name": "ec50_calibrated_t",
-            "type": "number"
-        },
-        {
-            "name": "ec50_calibrated_c",
-            "type": "number"
-        },
-        {
-            "name": "ec50_rise_calibrated_t",
-            "type": "number"
-        },
-        {
-            "name": "ec50_rise_calibrated_c",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_calibrated_t",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_calibrated_c",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_calibrated",
             "type": "number"
         },
         {
@@ -470,7 +94,31 @@
             "type": "number"
         },
         {
-            "name": "stabilityscore_cnn_calibrated_c",
+            "name": "ec50_calibrated_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_rise_calibrated_t",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_calibrated_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_calibrated_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_rise_calibrated_c",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_calibrated_c",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_calibrated",
             "type": "number"
         },
         {
@@ -478,8 +126,352 @@
             "type": "number"
         },
         {
+            "name": "stabilityscore_cnn_calibrated_c",
+            "type": "number"
+        },
+        {
             "name": "stabilityscore_cnn_calibrated",
             "type": "number"
+        },
+        {
+            "name": "counts0_t",
+            "type": "any"
+        },
+        {
+            "name": "counts1_t",
+            "type": "any"
+        },
+        {
+            "name": "counts2_t",
+            "type": "any"
+        },
+        {
+            "name": "counts3_t",
+            "type": "any"
+        },
+        {
+            "name": "counts4_t",
+            "type": "any"
+        },
+        {
+            "name": "counts5_t",
+            "type": "any"
+        },
+        {
+            "name": "counts6_t",
+            "type": "any"
+        },
+        {
+            "name": "downsamp_counts1_t",
+            "type": "any"
+        },
+        {
+            "name": "downsamp_counts2_t",
+            "type": "any"
+        },
+        {
+            "name": "downsamp_counts3_t",
+            "type": "any"
+        },
+        {
+            "name": "downsamp_counts4_t",
+            "type": "any"
+        },
+        {
+            "name": "downsamp_counts5_t",
+            "type": "any"
+        },
+        {
+            "name": "downsamp_counts6_t",
+            "type": "any"
+        },
+        {
+            "name": "pred_counts1_t",
+            "type": "any"
+        },
+        {
+            "name": "pred_counts2_t",
+            "type": "any"
+        },
+        {
+            "name": "pred_counts3_t",
+            "type": "any"
+        },
+        {
+            "name": "pred_counts4_t",
+            "type": "any"
+        },
+        {
+            "name": "pred_counts5_t",
+            "type": "any"
+        },
+        {
+            "name": "pred_counts6_t",
+            "type": "any"
+        },
+        {
+            "name": "delta_llh1_t",
+            "type": "any"
+        },
+        {
+            "name": "delta_llh2_t",
+            "type": "any"
+        },
+        {
+            "name": "delta_llh3_t",
+            "type": "any"
+        },
+        {
+            "name": "delta_llh4_t",
+            "type": "any"
+        },
+        {
+            "name": "delta_llh5_t",
+            "type": "any"
+        },
+        {
+            "name": "delta_llh6_t",
+            "type": "any"
+        },
+        {
+            "name": "signed_delta_llh1_t",
+            "type": "any"
+        },
+        {
+            "name": "signed_delta_llh2_t",
+            "type": "any"
+        },
+        {
+            "name": "signed_delta_llh3_t",
+            "type": "any"
+        },
+        {
+            "name": "signed_delta_llh4_t",
+            "type": "any"
+        },
+        {
+            "name": "signed_delta_llh5_t",
+            "type": "any"
+        },
+        {
+            "name": "signed_delta_llh6_t",
+            "type": "any"
+        },
+        {
+            "name": "sel_k_t",
+            "type": "any"
+        },
+        {
+            "name": "sum_delta_llh_t",
+            "type": "any"
+        },
+        {
+            "name": "sum_signed_delta_llh_t",
+            "type": "any"
+        },
+        {
+            "name": "ec50_v2_t",
+            "type": "any"
+        },
+        {
+            "name": "protein_sequence_t",
+            "type": "any"
+        },
+        {
+            "name": "full_protein_sequence_t",
+            "type": "any"
+        },
+        {
+            "name": "ec50_rise_v2_t",
+            "type": "any"
+        },
+        {
+            "name": "stabilityscore_v2_t",
+            "type": "any"
+        },
+        {
+            "name": "counts0_c",
+            "type": "any"
+        },
+        {
+            "name": "counts1_c",
+            "type": "any"
+        },
+        {
+            "name": "counts2_c",
+            "type": "any"
+        },
+        {
+            "name": "counts3_c",
+            "type": "any"
+        },
+        {
+            "name": "counts4_c",
+            "type": "any"
+        },
+        {
+            "name": "counts5_c",
+            "type": "any"
+        },
+        {
+            "name": "counts6_c",
+            "type": "any"
+        },
+        {
+            "name": "downsamp_counts1_c",
+            "type": "any"
+        },
+        {
+            "name": "downsamp_counts2_c",
+            "type": "any"
+        },
+        {
+            "name": "downsamp_counts3_c",
+            "type": "any"
+        },
+        {
+            "name": "downsamp_counts4_c",
+            "type": "any"
+        },
+        {
+            "name": "downsamp_counts5_c",
+            "type": "any"
+        },
+        {
+            "name": "downsamp_counts6_c",
+            "type": "any"
+        },
+        {
+            "name": "pred_counts1_c",
+            "type": "any"
+        },
+        {
+            "name": "pred_counts2_c",
+            "type": "any"
+        },
+        {
+            "name": "pred_counts3_c",
+            "type": "any"
+        },
+        {
+            "name": "pred_counts4_c",
+            "type": "any"
+        },
+        {
+            "name": "pred_counts5_c",
+            "type": "any"
+        },
+        {
+            "name": "pred_counts6_c",
+            "type": "any"
+        },
+        {
+            "name": "delta_llh1_c",
+            "type": "any"
+        },
+        {
+            "name": "delta_llh2_c",
+            "type": "any"
+        },
+        {
+            "name": "delta_llh3_c",
+            "type": "any"
+        },
+        {
+            "name": "delta_llh4_c",
+            "type": "any"
+        },
+        {
+            "name": "delta_llh5_c",
+            "type": "any"
+        },
+        {
+            "name": "delta_llh6_c",
+            "type": "any"
+        },
+        {
+            "name": "signed_delta_llh1_c",
+            "type": "any"
+        },
+        {
+            "name": "signed_delta_llh2_c",
+            "type": "any"
+        },
+        {
+            "name": "signed_delta_llh3_c",
+            "type": "any"
+        },
+        {
+            "name": "signed_delta_llh4_c",
+            "type": "any"
+        },
+        {
+            "name": "signed_delta_llh5_c",
+            "type": "any"
+        },
+        {
+            "name": "signed_delta_llh6_c",
+            "type": "any"
+        },
+        {
+            "name": "sel_k_c",
+            "type": "any"
+        },
+        {
+            "name": "sum_delta_llh_c",
+            "type": "any"
+        },
+        {
+            "name": "sum_signed_delta_llh_c",
+            "type": "any"
+        },
+        {
+            "name": "ec50_v2_c",
+            "type": "any"
+        },
+        {
+            "name": "protein_sequence_c",
+            "type": "any"
+        },
+        {
+            "name": "full_protein_sequence_c",
+            "type": "any"
+        },
+        {
+            "name": "ec50_rise_v2_c",
+            "type": "any"
+        },
+        {
+            "name": "stabilityscore_v2_c",
+            "type": "any"
+        },
+        {
+            "name": "base_sequence",
+            "type": "any"
+        },
+        {
+            "name": "manipulation",
+            "type": "any"
+        },
+        {
+            "name": "n_steps",
+            "type": "any"
+        },
+        {
+            "name": "stabilityscore_v2",
+            "type": "any"
+        },
+        {
+            "name": "sequence",
+            "type": "any"
+        },
+        {
+            "name": "ec50_t_calibrated_1",
+            "type": "any"
+        },
+        {
+            "name": "ec50_c_calibrated_1",
+            "type": "any"
         }
     ]
 }

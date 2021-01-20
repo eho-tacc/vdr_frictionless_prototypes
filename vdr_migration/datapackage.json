@@ -115,16 +115,20 @@
         },
         {
             "path": [
-                "data/TwoSix_100K_stab_scores_1.csv", "data/TwoSix_100K_stab_scores_2.csv"
+                "data/stab_scores/Rocklin_stab_scores_normalized.csv",
+                "data/stab_scores/winter19_stab_scores_1_normalized.csv",
+                "data/stab_scores/winter19_stab_scores_2_normalized.csv",
+                "data/stab_scores/TwoSix_100K_stab_scores_1_normalized.csv",
+                "data/stab_scores/TwoSix_100K_stab_scores_2_normalized.csv"
             ],
             "schema": "schemas/stab_scores.json",
             "name": "stab_scores",
             "profile": "tabular-data-resource",
             "stats": {
-                "hash": "dbbd5c34ab3909a60ce3434c082828c2",
-                "bytes": 181442550,
-                "fields": 117,
-                "rows": 98982
+                "hash": "7790db847bc44d1275a491060a67fa09",
+                "bytes": 361350057,
+                "fields": 118,
+                "rows": 213620
             },
             "encoding": "utf-8",
             "dialect": {
