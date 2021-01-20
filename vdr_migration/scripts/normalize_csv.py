@@ -27,7 +27,7 @@ def get_appended_fp(fp, suffix, out_dir=None):
     return f"{path}{suffix}{ext}"
 
 
-def main(files, out_dir, overwrite=False, fill_value=str()):
+def main(files, out_dir, overwrite=False, fill_value=str(), intersect_thresh=0.5):
     norm_cols = pd.CategoricalIndex(list())
     # get union of unique field names
     for fp in files:
@@ -52,11 +52,25 @@ def main(files, out_dir, overwrite=False, fill_value=str()):
         df = pd.read_csv(fp)
         # fill missing columns with empty value
         logging.info(f"Normalizing columns in CSV '{fp}', writing to '{new_fp}'")
+        empty_cols = 0
         for col in norm_cols:
             if col not in df.columns:
                 logging.debug(f"File at '{fp}' is missing column '{col}'. " +
                               f"Adding fill value '{fill_value}' for this column.")
                 df[col] = fill_value
+                empty_cols += 1
+
+        # warn if too many empty columns were inserted
+        tot_cols = float(len(df.columns))
+        prop_empty = empty_cols / tot_cols
+        if prop_empty > intersect_thresh:
+            log_func = logging.warning
+        else:
+            log_func = logging.info
+        log_func(f"Inserted {empty_cols} empty columns into the DataFrame " +
+                 f"read from '{fp}'. This accounts for {(prop_empty * 100):.2f}% " +
+                 f"of columns in this table.")
+
         # write to new fp
         df.to_csv(new_fp, index=False)
 
