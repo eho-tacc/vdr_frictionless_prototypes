@@ -8,16 +8,26 @@ logging.basicConfig(level=logging.INFO)
 
 def get_opts():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f', '--files', help='file path(s) of CSV files to normalize', required=True, nargs="+")
+    parser.add_argument('-f', '--files', help='file path(s) of CSV files to normalize',
+                        required=True, nargs="+")
+    parser.add_argument('--out-dir', help='directory in which to write normalized files. Omitting will write normalized files to same directory as source files.',
+                        required=False, default=None)
+    parser.add_argument('--overwrite', help='whether to overwrite output paths, even if they already exist',
+                        required=False, action='store_true', default=False)
     return vars(parser.parse_args())
 
 
-def get_appended_fp(fp, suffix):
+def get_appended_fp(fp, suffix, out_dir=None):
     path, ext = os.path.splitext(fp)
+    # cd to out_dir if specified
+    if out_dir is not None:
+        assert os.path.isdir(out_dir)
+        in_dir, fname = os.path.split(path)
+        path = os.path.join(out_dir, fname)
     return f"{path}{suffix}{ext}"
 
 
-def main(files, fill_value=str()):
+def main(files, out_dir, overwrite=False, fill_value=str()):
     norm_cols = pd.CategoricalIndex(list())
     # get union of unique field names
     for fp in files:
@@ -25,7 +35,17 @@ def main(files, fill_value=str()):
         norm_cols = norm_cols.union(df.columns, sort=False)
     for fp in files:
         # get appended file name
-        new_fp = get_appended_fp(fp, "_normalized")
+        new_fp = get_appended_fp(fp, "_normalized", out_dir=out_dir)
+        # warn if new_fp exists
+        if os.path.exists(new_fp):
+            if overwrite is not True:
+                raise FileExistsError(
+                    f"Write path '{new_fp}' already exists. Pass --overwrite " +
+                    f"if you are sure you want to overwrite this path.")
+            else:
+                logging.info(
+                    f"Write path '{new_fp}' already exists. " +
+                    f"Overwriting... (--overwrite was passed)")
         # load as dataframe
         # should be small enough to fit in memory, see xarray.Dataset or
         # Dask arrays if we prefer lazy loading
