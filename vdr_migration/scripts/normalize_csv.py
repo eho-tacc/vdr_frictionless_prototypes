@@ -3,7 +3,7 @@ import pandas as pd
 import logging
 import argparse
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.WARNING)
 
 
 def get_opts():
@@ -26,13 +26,24 @@ def get_appended_fp(fp, suffix, out_dir=None):
         path = os.path.join(out_dir, fname)
     return f"{path}{suffix}{ext}"
 
-
-def main(files, out_dir, overwrite=False, fill_value=str(), intersect_thresh=0.5):
-    norm_cols = pd.CategoricalIndex(list())
-    # get union of unique field names
+def get_norm_cols(files):
+    """get union of unique field names"""
+    col_src = dict()
+    norm_cols = list()
     for fp in files:
         df = pd.read_csv(fp, nrows=5)
-        norm_cols = norm_cols.union(df.columns, sort=False)
+        for col in df.columns:
+            if col in norm_cols:
+                col_src[col].append(fp)
+            else:
+                norm_cols.append(col)
+                col_src[col] = [fp]
+    # breakpoint()
+    return norm_cols
+
+
+def main(files, out_dir, overwrite=False, fill_value=str(), intersect_thresh=0.5):
+    norm_cols = get_norm_cols(files)
     for fp in files:
         # get appended file name
         new_fp = get_appended_fp(fp, "_normalized", out_dir=out_dir)
