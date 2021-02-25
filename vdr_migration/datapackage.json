@@ -115,14 +115,55 @@
         },
         {
             "path": [
-                "data/stab_scores/Rocklin_stab_scores_normalized.csv",
-                "data/stab_scores/winter19_stab_scores_1_normalized.csv",
-                "data/stab_scores/winter19_stab_scores_2_normalized.csv",
-                "data/stab_scores/TwoSix_100K_stab_scores_1_normalized.csv",
-                "data/stab_scores/TwoSix_100K_stab_scores_2_normalized.csv"
+                "data/all_stab_scores/og/topology_mining_rd2.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/181114_IL_binders_FS.v2.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Rocklin_scrambled_controls_display_vector_2.rd4.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Rocklin_display_vector_2.rd4.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Eva1_scrambled_controls.v3.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/100K_winter19.v3.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Longxing_scrambled_controls.v3.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/TwoSix_100K.v4.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/optE1.v2.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/topology_mining_and_Longxing_all_chips.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/optE1_scrambled_controls.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Eva2_scrambled_controls.v3.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/181114_Benjamin_NTF2.experimental_stability_scores.csv"
             ],
             "schema": "schemas/stab_scores.json",
             "name": "stab_scores",
+            "profile": "tabular-data-resource",
+            "stats": {
+                "hash": "7790db847bc44d1275a491060a67fa09",
+                "bytes": 361350057,
+                "fields": 118,
+                "rows": 213620
+            },
+            "encoding": "utf-8",
+            "dialect": {
+                "commentChar": "#"
+            },
+            "format": "csv",
+            "hashing": "md5",
+            "compression": "no",
+            "compressionPath": "",
+            "query": {}
+        },
+        {
+            "path": [
+                "data/all_stab_scores/og/Inna.v7.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Rocklin.rd1.v4.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Eva2.v7.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Rocklin.rd3.v4.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Rocklin.rd4.v4.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Rocklin.rd2.v4.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Eva1.v7.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Rocklin_ssm_stability_scores.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Rocklin.scrambled.experimental_stability_scores.v2.csv",
+                "data/all_stab_scores/og/Rocklin.v6.experimental_stability_scores.csv",
+                "data/all_stab_scores/og/Longxing.v10.experimental_stability_scores.csv"
+            ],
+            "schema": "schemas/stab_scores_legacy.json",
+            "name": "stab_scores_legacy",
             "profile": "tabular-data-resource",
             "stats": {
                 "hash": "7790db847bc44d1275a491060a67fa09",
