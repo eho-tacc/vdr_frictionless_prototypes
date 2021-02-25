@@ -14,6 +14,8 @@ def get_opts():
                         required=False, default=None)
     parser.add_argument('--overwrite', help='whether to overwrite output paths, even if they already exist',
                         required=False, action='store_true', default=False)
+    parser.add_argument('--sort-cols', help='whether to sort columns alphabetically',
+                        required=False, action='store_true', default=True)
     return vars(parser.parse_args())
 
 
@@ -42,7 +44,8 @@ def get_norm_cols(files):
     return norm_cols
 
 
-def main(files, out_dir, overwrite=False, fill_value=str(), intersect_thresh=0.5):
+def main(files, out_dir, overwrite=False, fill_value=str(), intersect_thresh=0.5,
+         sort_cols=True):
     norm_cols = get_norm_cols(files)
     for fp in files:
         # get appended file name
@@ -70,6 +73,11 @@ def main(files, out_dir, overwrite=False, fill_value=str(), intersect_thresh=0.5
                               f"Adding fill value '{fill_value}' for this column.")
                 df[col] = fill_value
                 empty_cols += 1
+
+        # sort columns such that order is same as norm_cols
+        if sort_cols:
+            logging.debug(f"'sort_cols' flag is True. Sorting columns alphabetically...")
+            df = df[norm_cols]
 
         # warn if too many empty columns were inserted
         tot_cols = float(len(df.columns))
