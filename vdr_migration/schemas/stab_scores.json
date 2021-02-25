@@ -10,6 +10,10 @@
             "type": "string"
         },
         {
+            "name": "chip_name",
+            "type": "any"
+        },
+        {
             "name": "counts0_t",
             "type": "number"
         },
@@ -158,7 +162,7 @@
             "type": "number"
         },
         {
-            "name": "ec50_v2_t",
+            "name": "ec50_t",
             "type": "number"
         },
         {
@@ -174,11 +178,11 @@
             "type": "number"
         },
         {
-            "name": "ec50_rise_v2_t",
+            "name": "ec50_rise_t",
             "type": "number"
         },
         {
-            "name": "stabilityscore_v2_t",
+            "name": "stabilityscore_t",
             "type": "number"
         },
         {
@@ -330,7 +334,7 @@
             "type": "number"
         },
         {
-            "name": "ec50_v2_c",
+            "name": "ec50_c",
             "type": "number"
         },
         {
@@ -346,23 +350,7 @@
             "type": "number"
         },
         {
-            "name": "ec50_rise_v2_c",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_v2_c",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_v2",
-            "type": "number"
-        },
-        {
-            "name": "ec50_c",
-            "type": "number"
-        },
-        {
-            "name": "ec50_t",
+            "name": "ec50_rise_c",
             "type": "number"
         },
         {
@@ -370,35 +358,43 @@
             "type": "number"
         },
         {
-            "name": "stabilityscore_t",
-            "type": "number"
-        },
-        {
-            "name": "ec50_rise_c",
-            "type": "number"
-        },
-        {
-            "name": "ec50_rise_t",
-            "type": "number"
-        },
-        {
             "name": "stabilityscore",
             "type": "number"
+        },
+        {
+            "name": "protein_sequence",
+            "type": "any"
+        },
+        {
+            "name": "sequence",
+            "type": "string"
+        },
+        {
+            "name": "old_name",
+            "type": "any"
+        },
+        {
+            "name": "coding_dna_t",
+            "type": "any"
+        },
+        {
+            "name": "coding_dna_c",
+            "type": "any"
         },
         {
             "name": "ec50_t_calibrated_1",
             "type": "number"
         },
         {
-            "name": "ec50_c_calibrated_1",
-            "type": "number"
+            "name": "ec50_t_calibrated_2",
+            "type": "any"
+        },
+        {
+            "name": "ec50_t_calibrated_3",
+            "type": "any"
         },
         {
             "name": "ec50_calibrated_t",
-            "type": "number"
-        },
-        {
-            "name": "ec50_calibrated_c",
             "type": "number"
         },
         {
@@ -406,11 +402,27 @@
             "type": "number"
         },
         {
-            "name": "ec50_rise_calibrated_c",
+            "name": "stabilityscore_calibrated_t",
             "type": "number"
         },
         {
-            "name": "stabilityscore_calibrated_t",
+            "name": "ec50_c_calibrated_1",
+            "type": "number"
+        },
+        {
+            "name": "ec50_c_calibrated_2",
+            "type": "any"
+        },
+        {
+            "name": "ec50_c_calibrated_3",
+            "type": "any"
+        },
+        {
+            "name": "ec50_calibrated_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_rise_calibrated_c",
             "type": "number"
         },
         {
@@ -420,10 +432,6 @@
         {
             "name": "stabilityscore_calibrated",
             "type": "number"
-        },
-        {
-            "name": "sequence",
-            "type": "string"
         },
         {
             "name": "ec50_cnn_pred_t",
@@ -458,40 +466,32 @@
             "type": "number"
         },
         {
-            "name": "chip_name",
-            "type": "any"
+            "name": "ec50_v2_t",
+            "type": "number"
         },
         {
-            "name": "protein_sequence",
-            "type": "any"
+            "name": "ec50_rise_v2_t",
+            "type": "number"
         },
         {
-            "name": "old_name",
-            "type": "any"
+            "name": "stabilityscore_v2_t",
+            "type": "number"
         },
         {
-            "name": "coding_dna_t",
-            "type": "any"
+            "name": "ec50_v2_c",
+            "type": "number"
         },
         {
-            "name": "coding_dna_c",
-            "type": "any"
+            "name": "ec50_rise_v2_c",
+            "type": "number"
         },
         {
-            "name": "ec50_t_calibrated_2",
-            "type": "any"
+            "name": "stabilityscore_v2_c",
+            "type": "number"
         },
         {
-            "name": "ec50_t_calibrated_3",
-            "type": "any"
-        },
-        {
-            "name": "ec50_c_calibrated_2",
-            "type": "any"
-        },
-        {
-            "name": "ec50_c_calibrated_3",
-            "type": "any"
+            "name": "stabilityscore_v2",
+            "type": "number"
         },
         {
             "name": "lc_scrambles",

@@ -10,31 +10,11 @@
             "type": "string"
         },
         {
-            "name": "assay_library",
+            "name": "stabilityscore",
             "type": "number"
         },
         {
-            "name": "ec50_t",
-            "type": "number"
-        },
-        {
-            "name": "ec50_95ci_lbound_t",
-            "type": "number"
-        },
-        {
-            "name": "ec50_95ci_ubound_t",
-            "type": "number"
-        },
-        {
-            "name": "ec50_95ci_t",
-            "type": "number"
-        },
-        {
-            "name": "ec50_pred_t",
-            "type": "number"
-        },
-        {
-            "name": "ec50_rise_t",
+            "name": "stabilityscore_calibrated",
             "type": "number"
         },
         {
@@ -42,27 +22,23 @@
             "type": "number"
         },
         {
-            "name": "ec50_c",
+            "name": "stabilityscore_calibrated_t",
             "type": "number"
         },
         {
-            "name": "ec50_95ci_lbound_c",
+            "name": "ec50_t",
             "type": "number"
         },
         {
-            "name": "ec50_95ci_ubound_c",
+            "name": "ec50_calibrated_t",
             "type": "number"
         },
         {
-            "name": "ec50_95ci_c",
+            "name": "ec50_rise_t",
             "type": "number"
         },
         {
-            "name": "ec50_pred_c",
-            "type": "number"
-        },
-        {
-            "name": "ec50_rise_c",
+            "name": "ec50_rise_calibrated_t",
             "type": "number"
         },
         {
@@ -70,7 +46,23 @@
             "type": "number"
         },
         {
-            "name": "stabilityscore",
+            "name": "stabilityscore_calibrated_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_calibrated_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_rise_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_rise_calibrated_c",
             "type": "number"
         },
         {
@@ -94,39 +86,11 @@
             "type": "number"
         },
         {
-            "name": "ec50_calibrated_t",
-            "type": "number"
-        },
-        {
-            "name": "ec50_rise_calibrated_t",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_calibrated_t",
-            "type": "number"
-        },
-        {
-            "name": "ec50_calibrated_c",
-            "type": "number"
-        },
-        {
-            "name": "ec50_rise_calibrated_c",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_calibrated_c",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_calibrated",
+            "name": "stabilityscore_cnn_calibrated_c",
             "type": "number"
         },
         {
             "name": "stabilityscore_cnn_calibrated_t",
-            "type": "number"
-        },
-        {
-            "name": "stabilityscore_cnn_calibrated_c",
             "type": "number"
         },
         {
@@ -136,6 +100,42 @@
         {
             "name": "sequence",
             "type": "any"
+        },
+        {
+            "name": "assay_library",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_lbound_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_ubound_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_pred_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_lbound_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_ubound_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_pred_c",
+            "type": "number"
         },
         {
             "name": "my_wt",
