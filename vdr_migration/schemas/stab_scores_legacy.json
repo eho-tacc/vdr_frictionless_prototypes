@@ -1,0 +1,189 @@
+{
+    "primaryKey": ["dataset", "name"],
+    "fields": [
+        {
+            "name": "dataset",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "assay_library",
+            "type": "number"
+        },
+        {
+            "name": "ec50_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_lbound_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_ubound_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_pred_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_rise_t",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_lbound_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_ubound_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_95ci_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_pred_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_rise_c",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_c",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore",
+            "type": "number"
+        },
+        {
+            "name": "ec50_cnn_pred_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_cnn_pred_c",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_cnn_t",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_cnn_c",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_cnn",
+            "type": "number"
+        },
+        {
+            "name": "ec50_calibrated_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_rise_calibrated_t",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_calibrated_t",
+            "type": "number"
+        },
+        {
+            "name": "ec50_calibrated_c",
+            "type": "number"
+        },
+        {
+            "name": "ec50_rise_calibrated_c",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_calibrated_c",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_calibrated",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_cnn_calibrated_t",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_cnn_calibrated_c",
+            "type": "number"
+        },
+        {
+            "name": "stabilityscore_cnn_calibrated",
+            "type": "number"
+        },
+        {
+            "name": "sequence",
+            "type": "any"
+        },
+        {
+            "name": "my_wt",
+            "type": "any"
+        },
+        {
+            "name": "pos",
+            "type": "any"
+        },
+        {
+            "name": "mut",
+            "type": "any"
+        },
+        {
+            "name": "wt_aa",
+            "type": "any"
+        },
+        {
+            "name": "delta_ec50_t",
+            "type": "any"
+        },
+        {
+            "name": "delta_pred_vs_wt_t",
+            "type": "any"
+        },
+        {
+            "name": "delta_ec50_c",
+            "type": "any"
+        },
+        {
+            "name": "delta_pred_vs_wt_c",
+            "type": "any"
+        },
+        {
+            "name": "ec50_rise_c_adj",
+            "type": "any"
+        },
+        {
+            "name": "stabilityscore_c_adj",
+            "type": "any"
+        },
+        {
+            "name": "consensus_ec50_rise",
+            "type": "any"
+        },
+        {
+            "name": "consensus_stability_score",
+            "type": "any"
+        }
+    ]
+}
