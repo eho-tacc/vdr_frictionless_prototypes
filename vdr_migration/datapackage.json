@@ -135,10 +135,10 @@
             "name": "stab_scores",
             "profile": "tabular-data-resource",
             "stats": {
-                "hash": "7790db847bc44d1275a491060a67fa09",
-                "bytes": 361350057,
-                "fields": 118,
-                "rows": 213620
+                "hash": "64ce7c80d469107d9c9dc5eb971ea67a",
+                "bytes": 590245115,
+                "fields": 131,
+                "rows": 493019
             },
             "encoding": "utf-8",
             "dialect": {
@@ -156,10 +156,6 @@
                 "data/stab_scores_legacy/Eva2.v7.experimental_stability_scores_normalized.csv",
                 "data/stab_scores_legacy/Inna.v7.experimental_stability_scores_normalized.csv",
                 "data/stab_scores_legacy/Longxing.v10.experimental_stability_scores_normalized.csv",
-                "data/stab_scores_legacy/Rocklin.rd1.v4.experimental_stability_scores_normalized.csv",
-                "data/stab_scores_legacy/Rocklin.rd2.v4.experimental_stability_scores_normalized.csv",
-                "data/stab_scores_legacy/Rocklin.rd3.v4.experimental_stability_scores_normalized.csv",
-                "data/stab_scores_legacy/Rocklin.rd4.v4.experimental_stability_scores_normalized.csv",
                 "data/stab_scores_legacy/Rocklin.scrambled.experimental_stability_scores.v2_normalized.csv",
                 "data/stab_scores_legacy/Rocklin.v6.experimental_stability_scores_normalized.csv",
                 "data/stab_scores_legacy/Rocklin_ssm_stability_scores.experimental_stability_scores_normalized.csv"
@@ -168,10 +164,10 @@
             "name": "stab_scores_legacy",
             "profile": "tabular-data-resource",
             "stats": {
-                "hash": "7790db847bc44d1275a491060a67fa09",
-                "bytes": 361350057,
-                "fields": 118,
-                "rows": 213620
+                "hash": "75e7f288d1f8eba1f143938aa3edd26f",
+                "bytes": 42087364,
+                "fields": 46,
+                "rows": 129397
             },
             "encoding": "utf-8",
             "dialect": {
